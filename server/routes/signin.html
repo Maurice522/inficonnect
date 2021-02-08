@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v4.1.1">
+  <title>Signin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
+  <!-- Custom styles for this template -->
+</head>
+<style>
+	/*add full-width input fields*/
+  form{
+  position: relative;
+  left:10%;
+  top:15%;
+  }
+  button:hover{
+    color: #289dcc;
+  }
+
+  div.main{
+    background-color: white;
+    width: 30rem;
+    margin-top: 3%;
+    height: 22rem;
+     margin-left: 32.5%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+
+  input{
+    margin: 4% 0px;
+  }
+
+  footer{
+    background-color: #f0f8ff;
+    color: black;
+    margin-top: 8%;
+  }
+
+  a{
+    margin-top: 2%;
+  color: black;
+  }
+
+  a:hover{
+    color: black;
+    border-spacing: 4px;
+  }
+
+  p.footer{
+    margin-top: 5%;
+    color:black;
+  }
+  footer{
+    position: fixed;
+    left: 45.4%;
+    bottom: 5%;
+  }
+  body{
+    background-color: #f0f8ff;
+  }
+
+  div.text{
+    /* position: absolute;
+    left: 53%;
+    top:19%; */
+    margin-top: 1%;
+    text-align: center;
+      background-color: inherit;
+      padding-left: 2%;
+      padding-right: 2%;
+  }
+  span{
+    color: #289dcc;
+
+  }
+
+  div.box{
+    width:10px;
+    height:6rem;
+    background-color: black;
+    position: absolute;
+    top:5%;
+    left:36%;
+  }
+
+  p.info{
+    color: black;
+  }
+
+  h2{
+    color: #4d4d4d;
+    font-family: 'Merriweather', serif;
+    font-size: 4rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 4%;
+  }
+	input.half{
+		width: 49%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 2px solid #ccc;
+		box-sizing: border-box;
+	}
+	input.full {
+		width: 99.5%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 2px solid #ccc;
+		box-sizing: border-box;
+	}
+	/* set a style for all buttons*/
+	button {
+		background-color: green;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		cursor: pointer;
+		width: 100%;
+	}
+	/*float cancel and signup buttons and add an equal width*/
+	.cancelbtn,
+	.signupbtn {
+		background-color: black;
+		margin-left:1%;
+		width: 50%
+	}
+	/*add padding to container elements*/
+	.container {
+		padding: 16px;
+	}
+	/*define the modal’s background*/
+
+	.modal {
+		display: none;
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgb(0, 0, 0);
+		background-color: rgba(0, 0, 0, 0.4);
+		padding-top: 60px;
+	}
+	/*define the modal-content background*/
+
+	.modal-content {
+		position:fixed;
+		left:33.1%;
+		top:15%;
+		background-color: #fefefe;
+		margin: 5% auto 15% auto;
+		border: 1px solid #888;
+		width: 30%;
+		 box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	/*define the close button*/
+
+	.close {
+		position: absolute;
+		right: 35px;
+		top: 15px;
+		color: #000;
+		font-size: 40px;
+		font-weight: bold;
+	}
+	/*define the close hover and focus effects*/
+
+	.close:hover,
+	.close:focus {
+		color: red;
+		cursor: pointer;
+	}
+
+	p{
+	text-align: center;
+	}
+
+	.clearfix::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+	@media screen and (max-width: 300px) {
+		.cancelbtn,
+		.signupbtn {
+			width: 100%;
+		}
+	}
+</style>
+<body class="text-center">
+  <div class="text">
+    <h2><span>Infi</span>Connect</h2>
+  </div>
+  <div class="main">
+    <form class="form-signup" style="width:80%;"action="/signin" method="post">
+      <label for="inputEmail/username" class="sr-only">Email address/Username</label>
+      <input type="text" id="inputEmail" class="form-control" placeholder="Username" name="username" autofocus required>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
+      <button class="btn btn-lg btn-dark btn-block" type="submit">Log in</button>
+      <a href="#">Forgotten account?</a>
+      <hr>
+      <button class="btn btn-lg btn-block signup" onclick="document.getElementById('id01').style.display='block'" style="background-color:#289dcc; color:white;" type="submit">Create account</button>
+    </form>
+  </div>
+  	<div id="id01" class="modal">
+		<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+		<form class="modal-content animate" action="/signup" method="post">
+			<div class="container">
+				<input type="text" class="half" placeholder="First name" name="firstname" required>
+
+				<input type="text" class="half" placeholder="Last name" name="lastname" required>
+
+				<input type="text" class="full" placeholder="Username" name="username" required>
+
+				<input type="email" class="full" placeholder="Email address" name="email" required>
+
+				<input type="password" class="full" placeholder="Password" name="password" required>
+
+				<!-- <input type="password" class="full" placeholder="Confirm Password" name="pwdcfm" required> -->
+				<p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+				<div class="clearfix">
+					<button type="submit" class="signupbtn">Sign Up</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<!--close the modal by just clicking outside of the modal-->
+	<script>
+		var modal = document.getElementById('id01');
+
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+</body>
+<footer><p class="foot" style="color:black;">&copy; InfiEQ 2020.</p>
+</footer>
+
+
+</html>

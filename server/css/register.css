@@ -1,0 +1,96 @@
+
+form{
+position: relative;
+left:10%;
+top:15%;
+}
+button:hover{
+  color: #289dcc;
+}
+
+div.main{
+  background-color: white;
+  width: 30rem;
+  margin-top: 3%;
+  height: 22rem;
+   margin-left: 32.5%;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+input{
+  margin: 4% 0px;
+}
+
+footer{
+  background-color: #f0f8ff;
+  color: black;
+  margin-top: 8%;
+}
+
+a{
+  margin-top: 2%;
+color: black;
+}
+
+a:hover{
+  color: black;
+  border-spacing: 4px;
+}
+
+p.footer{
+  margin-top: 5%;
+  color:black;
+}
+footer{
+  position: fixed;
+  left: 45.4%;
+  bottom: 5%;
+}
+body{
+  background-color: #f0f8ff;
+}
+
+div.text{
+  /* position: absolute;
+  left: 53%;
+  top:19%; */
+  margin-top: 1%;
+  text-align: center;
+    background-color: inherit;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+span{
+  color: #289dcc;
+
+}
+
+div.box{
+  width:10px;
+  height:6rem;
+  background-color: black;
+  position: absolute;
+  top:5%;
+  left:36%;
+}
+
+/* div.para{
+  position: absolute;
+  left: 53%;
+  top:33%;
+  text-align: left;
+} */
+
+p.info{
+  color: black;
+}
+
+h2{
+  color: #4d4d4d;
+  font-family: 'Merriweather', serif;
+  font-size: 4rem;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-right: 4%;
+}
